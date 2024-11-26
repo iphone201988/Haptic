@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UEb-RH-hzw">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HapticVC-->
+        <scene sceneID="5e5-hu-dp7">
+            <objects>
+                <viewController storyboardIdentifier="HapticVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fgt-fS-uXc" customClass="HapticVC" customModule="Haptic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lel-N0-fHT">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9M3-HQ-rWn">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DHp-Ea-JE2">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WL-A4-l5a" customClass="TouchHapticView" customModule="Haptic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DHp-Ea-JE2" firstAttribute="top" secondItem="9M3-HQ-rWn" secondAttribute="top" id="85P-Gg-Nxx"/>
+                                    <constraint firstItem="7WL-A4-l5a" firstAttribute="leading" secondItem="9M3-HQ-rWn" secondAttribute="leading" id="9MY-C4-xcM"/>
+                                    <constraint firstAttribute="bottom" secondItem="7WL-A4-l5a" secondAttribute="bottom" id="B0j-xZ-cZn"/>
+                                    <constraint firstItem="DHp-Ea-JE2" firstAttribute="leading" secondItem="9M3-HQ-rWn" secondAttribute="leading" id="N9B-qN-mZv"/>
+                                    <constraint firstItem="7WL-A4-l5a" firstAttribute="top" secondItem="9M3-HQ-rWn" secondAttribute="top" id="UoK-2y-6bW"/>
+                                    <constraint firstAttribute="bottom" secondItem="DHp-Ea-JE2" secondAttribute="bottom" id="YbX-l2-tQV"/>
+                                    <constraint firstAttribute="trailing" secondItem="DHp-Ea-JE2" secondAttribute="trailing" id="iYc-KD-d43"/>
+                                    <constraint firstAttribute="trailing" secondItem="7WL-A4-l5a" secondAttribute="trailing" id="rjT-Wd-w8t"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w6y-i2-Xkb"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9M3-HQ-rWn" secondAttribute="trailing" id="3Ob-QG-Vzz"/>
+                            <constraint firstAttribute="bottom" secondItem="9M3-HQ-rWn" secondAttribute="bottom" id="bfQ-nb-BId"/>
+                            <constraint firstItem="9M3-HQ-rWn" firstAttribute="leading" secondItem="lel-N0-fHT" secondAttribute="leading" id="mRV-WA-On9"/>
+                            <constraint firstItem="9M3-HQ-rWn" firstAttribute="top" secondItem="lel-N0-fHT" secondAttribute="top" id="tSX-aN-AyP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AC9-o4-ike"/>
+                    <connections>
+                        <outlet property="hapticView" destination="7WL-A4-l5a" id="1mb-sH-ZPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NuR-TY-Yrz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177.6744186046512" y="23.819742489270389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vBJ-RY-7qw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="UEb-RH-hzw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fOq-Je-Hc4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ul7-3f-Nov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464.6511627906977" y="24.463519313304722"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="4480" height="6720"/>
+    </resources>
+</document>
